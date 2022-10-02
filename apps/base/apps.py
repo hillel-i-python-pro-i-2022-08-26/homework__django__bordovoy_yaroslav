@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class Greeting(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.base'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.base"
