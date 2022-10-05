@@ -1,0 +1,17 @@
+# Web development
+Django==4.1.1
+
+# Autoformatter
+black==22.8.0
+
+# Check codestyle
+flake8==5.0.4
+
+# Generate fake-names
+faker==15.0.0
+
+# Upgrade syntax
+pyupgrade==2.38.2
+
+# Pre-commit hook
+pre-commit==2.20.0
