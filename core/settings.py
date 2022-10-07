@@ -39,7 +39,10 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-LOCAL_APPS = ["apps.base.apps.Greeting"]
+LOCAL_APPS = [
+    "apps.base.apps.Greeting",
+    "apps.data_generator.apps.GeneratorConfig",
+]
 
 THIRD_PARTY_APPS = []
 

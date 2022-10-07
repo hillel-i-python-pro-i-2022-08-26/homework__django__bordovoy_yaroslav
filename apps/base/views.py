@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 from apps.base.services.random_name_generation import generate_random_name
 
 
-def greeting_for_user(request: HttpRequest, username: str = None) -> HttpResponse:
+def greeting_for_user(request: HttpRequest, username: str | None = None) -> HttpResponse:
     if username is None:
         username = generate_random_name()
 
