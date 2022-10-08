@@ -13,7 +13,5 @@ def greeting_for_user(
     return render(
         request,
         "base.html",
-        {
-            "homepage": f"Hello, {username}! Welcome to Django homework!"
-        }
+        {"homepage": f"Hello, {username}! Welcome to Django homework!"},
     )

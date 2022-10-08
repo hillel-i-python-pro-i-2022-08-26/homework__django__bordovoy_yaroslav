@@ -6,6 +6,7 @@ class GenerateUserInfo(NamedTuple):
     email: str
     password: str
 
-
     def __str__(self):
-        return f"Username: {self.username}, email: {self.email}, password: {self.password}"
+        return (
+            f"Username: {self.username}, email: {self.email}, password: {self.password}"
+        )

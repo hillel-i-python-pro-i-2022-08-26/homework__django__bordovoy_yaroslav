@@ -31,4 +31,3 @@ def get_login_and_email(amount: int) -> list[str]:
     ]
 
     return logins_for_view, mail_for_view
-

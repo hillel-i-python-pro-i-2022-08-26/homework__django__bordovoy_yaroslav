@@ -7,4 +7,3 @@ def information_for_view(amount: int) -> GenerateUserInfo:
     passwords = password_generator.passwords(amount=amount)
     for login, email, password in zip(logins, emails, passwords):
         yield GenerateUserInfo(username=login, email=email, password=password)
-
