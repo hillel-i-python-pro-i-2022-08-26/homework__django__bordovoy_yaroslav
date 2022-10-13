@@ -9,6 +9,6 @@ def users_data_view(request: HttpRequest, amount: int | None = None) -> HttpResp
         amount = 10
     return render(
         request,
-        "content.html",
+        "templates_for__data_generator/content.html",
         {"title": "User data", "user_info": information_for_view(amount=amount)},
     )
