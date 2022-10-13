@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+  <div>
+    <h2>Contacts</h2>
+    <ol>
+      {% for contact in contacts_db %}
+        <li>
+          <b>name:</b> {{ contact.name }},
+          <b>phone number:</b> {{ contact.phone_number }},
+          <b>date of birth:</b> {{ contact.date_of_birth }}
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}
