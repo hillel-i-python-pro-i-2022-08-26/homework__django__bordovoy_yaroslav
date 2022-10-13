@@ -43,6 +43,7 @@ DJANGO_APPS = [
 LOCAL_APPS = [
     "apps.base.apps.Greeting",
     "apps.data_generator.apps.GeneratorConfig",
+    "apps.contacts_db.apps.ContactsDbConfig",
 ]
 
 THIRD_PARTY_APPS = []
@@ -88,7 +89,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR.joinpath("db", "db.sqlite3"),
     }
 }
 
