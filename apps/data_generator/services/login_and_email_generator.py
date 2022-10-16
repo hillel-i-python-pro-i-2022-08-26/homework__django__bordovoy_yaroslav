@@ -5,7 +5,7 @@ import random
 fake = Faker()
 
 
-def get_login_and_email(amount: int) -> list[str]:
+def get_login_and_email(amount: int) -> tuple[list[str], list[str]]:
     logins_for_view = []
     for login in range(amount):
         login = f"{fake.first_name()}_{fake.last_name()}_{random.randint(0, 10000)}"

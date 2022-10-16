@@ -1,7 +1,7 @@
 from typing import NamedTuple
 
 
-class GenerateUserInfo(NamedTuple):
+class GeneratedUserInfo(NamedTuple):
     username: str
     email: str
     password: str
