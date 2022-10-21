@@ -44,6 +44,7 @@ LOCAL_APPS = [
     "apps.base.apps.Greeting",
     "apps.data_generator.apps.GeneratorConfig",
     "apps.contacts_db.apps.ContactsDbConfig",
+    "apps.admin_user",
 ]
 
 THIRD_PARTY_APPS = []
@@ -61,6 +62,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "core.urls"
+
+AUTH_USER_MODEL = "admin_user.AdminUser"
 
 TEMPLATES = [
     {
