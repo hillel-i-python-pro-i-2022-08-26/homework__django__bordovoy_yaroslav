@@ -11,4 +11,3 @@ class ContactsAdmin(admin.ModelAdmin):
     ordering = ("-modified_at", "-created_at")
     list_per_page = 20
     search_help_text = "Enter name, phone number or date of birth"
-
