@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% include 'templates_for__contacts_db/helpers/custom_navigation.html' %}
+
+    <h2>{{ title }}</h2><hr>
+
+    <form method="POST" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        <input type="submit" class="btn-sub" value="Update contact">
+    </form>
+
+<form action="{% url 'contacts_db:index' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Go back to main page">
+    </form>
+{% endblock %}
