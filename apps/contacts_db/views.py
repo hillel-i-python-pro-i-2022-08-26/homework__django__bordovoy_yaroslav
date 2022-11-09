@@ -58,7 +58,6 @@ def create_contact(request: HttpRequest) -> HttpResponse:
     )
 
 
-
 def read_contact(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q")
 
@@ -86,13 +85,13 @@ def update_contact(request: HttpRequest, pk: Contacts.pk) -> HttpResponse:
         else:
             form = ContactsForm(instance=contact)
     return render(
-            request,
-            "templates_for__contacts_db/update_contact.html",
-            {
-                "title": "Update contact",
-                "form": form,
-            },
-        )
+        request,
+        "templates_for__contacts_db/update_contact.html",
+        {
+            "title": "Update contact",
+            "form": form,
+        },
+    )
 
 
 def delete_contact(request: HttpRequest, pk: Contacts.pk) -> HttpResponse:

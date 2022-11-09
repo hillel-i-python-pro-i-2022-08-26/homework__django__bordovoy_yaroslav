@@ -9,16 +9,22 @@ class ContactsForm(ModelForm):
         fields = ["name", "phone_number", "date_of_birth"]
 
         widgets = {
-            "name": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Enter name",
-            }),
-            "phone_number": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Enter phone number",
-            }),
-            "date_of_birth": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Enter date of birth (y-m-d)",
-            }),
+            "name": TextInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Enter name",
+                }
+            ),
+            "phone_number": TextInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Enter phone number",
+                }
+            ),
+            "date_of_birth": TextInput(
+                attrs={
+                    "class": "form-control",
+                    "placeholder": "Enter date of birth (y-m-d)",
+                }
+            ),
         }
