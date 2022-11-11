@@ -54,3 +54,12 @@ create superuser
 ```
 make init-dev-i-create-superuser
 ```
+
+---
+
+## 🦸🏼‍♂️ Docker
+
+
+```
+make d-homework-i-run
+```

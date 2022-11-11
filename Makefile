@@ -46,3 +46,35 @@ delete-contacts:
 .PHONY: init-dev-i-create-superuser
 init-dev-i-create-superuser:
 	@DJANGO_SUPERUSER_PASSWORD=admin123 python manage.py createsuperuser --user admin --email admin@gmail.com --no-input
+
+.PHONY: d-homework-i-run
+# Make all actions needed for run homework from zero.
+d-homework-i-run:
+	@make init-config && \
+		make d-run
+
+.PHONY: d-homework-i-purge
+# Make all actions needed for purge homework related data.
+d-homework-i-purge:
+	@make d-purge
+
+
+.PHONY: d-run
+# Just run
+d-run:
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose \
+			up --build
+
+
+.PHONY: d-purge
+# Purge all data related with services
+d-purge:
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose \
+			down --volumes --remove-orphans --rmi local --timeout 0
+
+.PHONY: init-config
+# Init config files
+init-config:
+	@cp docker-compose.override.dev.yml docker-compose.override.yml
