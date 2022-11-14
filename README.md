@@ -44,3 +44,13 @@ make delete-contacts
 ---------------------
 python manage.py delete_contacts --delete
 ```
+
+---
+
+## 🦸🏼‍♂️ Superuser
+
+create superuser
+
+```
+make init-dev-i-create-superuser
+```
