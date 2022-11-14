@@ -45,6 +45,7 @@ LOCAL_APPS = [
     "apps.data_generator.apps.GeneratorConfig",
     "apps.contacts_db.apps.ContactsDbConfig",
     "apps.admin_user",
+    "apps.sessions_app.apps.SessionsAppConfig",
 ]
 
 THIRD_PARTY_APPS = []
