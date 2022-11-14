@@ -1,0 +1,11 @@
+{% include 'templates_for__contacts_db/helpers/custom_navigation.html' %}
+
+<h2>{{ title }}</h2><hr>
+
+<p><b>Name:</b> {{ contact.name }}.</p>
+<p><b>Phone number:</b> {{ contact.phone_number }}</p>
+<p><b>Date of birthday</b>: {{ contact.date_of_birth }}</p>
+
+{% include 'templates_for__contacts_db/helpers/update_button.html' %}<br>
+{% include 'templates_for__contacts_db/helpers/delete_button.html' %}
+<hr>
