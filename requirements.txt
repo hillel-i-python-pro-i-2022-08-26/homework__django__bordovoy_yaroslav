@@ -15,3 +15,9 @@ pyupgrade==3.2.0
 
 # Pre-commit hook
 pre-commit==2.20.0
+
+# For environment variables and config
+django-environ==0.9.0
+
+# For DB connection
+psycopg2-binary==2.9.5
