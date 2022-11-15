@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% include 'templates_for__contacts_db/helpers/custom_navigation.html' %}
+
+    <div>
+    <h2>Contacts</h2><hr>
+    <style>
+        table {
+            width: 50%;
+            background: red;
+            color: black;
+            border-spacing: 1px;
+        }
+        td, th {
+            background: gainsboro;
+            padding: 3px;
+        }
+    </style>
+        <table border="1">
+            <tr>
+                <td align="center"><b>№</b></td>
+                <td align="center"><b>Name</b></td>
+                <td align="center"><b>Phone number</b></td>
+                <td align="center"><b>Date of birth</b></td>
+                <td align="center"><b>Navigation</b></td>
+            </tr>
+            <ol>
+                <tr>
+                {% for contact in contacts %}
+                    <td align="center">{{ contact.pk }}</td>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.phone_number }}</td>
+                    <td>{{ contact.date_of_birth }}</td>
+                    <td align="center">
+                        {% include 'templates_for__contacts_db/helpers/read_more_button.html' %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </ol>
+        </table>
+
+    </div>
+{% endblock %}

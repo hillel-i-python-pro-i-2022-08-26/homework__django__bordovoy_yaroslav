@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+  <div>
+    <h2>User data</h2><hr>
+    <ol>
+      {% for user in user_info %}
+        <li>
+          <b>Username:</b> {{ user.username }},
+          <b>email:</b> {{ user.email }},
+          <b>password:</b> {{ user.password }}
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}

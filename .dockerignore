@@ -1,0 +1,10 @@
+# Ignore all
+**
+
+# with the exception of
+!docker/app
+!core
+!apps
+!manage.py
+!requirements.txt
+!Makefile
