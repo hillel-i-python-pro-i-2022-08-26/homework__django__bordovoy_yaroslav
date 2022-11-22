@@ -1,4 +1,4 @@
 <form action="{% url 'contacts_db:update_contact' contact.pk %}" method="post">
     {% csrf_token %}
-    <input type="submit" value="Update contact">
+    <input type="submit" class="btn btn-success btn-sm" value="Update contact">
 </form>
