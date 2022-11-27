@@ -28,7 +28,6 @@ class Contacts(models.Model):
 
     __repr__ = __str__
 
-
     def get_absolute_url(self):
         return reverse(
             "contacts_db:update_contact",

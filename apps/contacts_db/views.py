@@ -22,6 +22,7 @@ def contact(request: HttpRequest, pk: Contacts.pk) -> HttpResponse:
         },
     )
 
+
 """
 class ContactsView(TemplateView):
     template_name = "templates_for__contacts_db/contact.html"
@@ -33,6 +34,7 @@ class ContactsView(TemplateView):
         context['title'] = f"Info {contact.name}."
         return context
 """
+
 
 def search_contact(request: HttpRequest) -> HttpResponse:
     return render(
@@ -46,7 +48,12 @@ def search_contact(request: HttpRequest) -> HttpResponse:
 
 class ContactsCreateView(CreateView):
     model = Contacts
-    fields = ("name", "phone_number", "date_of_birth", "avatar", )
+    fields = (
+        "name",
+        "phone_number",
+        "date_of_birth",
+        "avatar",
+    )
     template_name = "templates_for__contacts_db/create_contact.html"
 
     def get_success_url(self):
@@ -72,7 +79,12 @@ def read_contact(request: HttpRequest) -> HttpResponse:
 
 class ContactsUpdateView(UpdateView):
     model = Contacts
-    fields = ("name", "phone_number", "date_of_birth", "avatar", )
+    fields = (
+        "name",
+        "phone_number",
+        "date_of_birth",
+        "avatar",
+    )
     template_name = "templates_for__contacts_db/contact_update_form.html"
 
     def get_success_url(self):
