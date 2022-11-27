@@ -95,7 +95,3 @@ class ContactsDeleteView(DeleteView):
     model = Contacts
     success_url = reverse_lazy("contacts_db:index")
 
-
-"""
-    
-"""
