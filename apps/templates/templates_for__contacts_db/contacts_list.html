@@ -2,8 +2,6 @@
 
 {% block content %}
 
-
-
     <div>
     <h2>Contacts</h2><hr>
         {% include 'templates_for__contacts_db/helpers/custom_navigation.html' %}
@@ -11,6 +9,7 @@
             <thead class="table-dark">
                 <tr>
                     <td align="center"><b>№</b></td>
+                    <td align="center"><b>Image</b></td>
                     <td align="center"><b>Name</b></td>
                     <td align="center"><b>Phone number</b></td>
                     <td align="center"><b>Date of birth</b></td>
@@ -19,8 +18,13 @@
             </thead>
             <tbody class="table-group-divider">
                 <tr>
-                {% for contact in contacts %}
+                {% for contact in object_list %}
                     <td align="center">{{ contact.pk }}</td>
+                    {% if contact.avatar %}
+                        <td align="center"><img src="{{ contact.avatar.url }}" alt="{{ contact.name }}"></td>
+                    {% else %}
+                        <td align="center">Photo not uploaded</td>
+                    {% endif %}
                     <td>{{ contact.name }}</td>
                     <td>{{ contact.phone_number }}</td>
                     <td>{{ contact.date_of_birth }}</td>

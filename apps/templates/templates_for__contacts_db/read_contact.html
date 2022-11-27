@@ -4,7 +4,7 @@
 
     {% include 'templates_for__contacts_db/helpers/contact_info.html' %}
 
-    <form action="{% url 'contacts_db:index' %}" method="post">
+    <form action="{% url 'contacts_db:index' %}" method="get">
         {% csrf_token %}
         <input type="submit" class="btn btn-secondary btn-sm" value="Go back to main page">
     </form>

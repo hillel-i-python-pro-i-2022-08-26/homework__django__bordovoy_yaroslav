@@ -8,8 +8,13 @@
 
     <form action="{% url 'contacts_db:read_contact' %}" method="get">
         <label>
-            <input name="q" type="text" placeholder="ID or phone number">
+            <input name="q" type="text" placeholder="Enter ID">
         </label>
+    </form><br>
+
+    <form action="{% url 'contacts_db:index' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-secondary btn-sm" value="Go back to main page">
     </form>
 
 {% endblock %}
