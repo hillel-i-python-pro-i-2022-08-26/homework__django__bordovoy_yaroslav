@@ -6,7 +6,7 @@ from .models import Contacts
 class ContactsForm(ModelForm):
     class Meta:
         model = Contacts
-        fields = ["name", "phone_number", "date_of_birth"]
+        fields = ["name", "phone_number", "date_of_birth", "avatar"]
 
         widgets = {
             "name": TextInput(
@@ -24,7 +24,7 @@ class ContactsForm(ModelForm):
             "date_of_birth": TextInput(
                 attrs={
                     "class": "form-control",
-                    "placeholder": "Enter date of birth (y-m-d)",
+                    "placeholder": "Enter date of birth (year-month-date)",
                 }
             ),
         }
