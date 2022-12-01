@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
                 ("phone_number", models.PositiveBigIntegerField()),
-                ("date_of_birth", models.PositiveSmallIntegerField()),
+                ("date_of_birth", models.DateTimeField()),
             ],
         ),
     ]
