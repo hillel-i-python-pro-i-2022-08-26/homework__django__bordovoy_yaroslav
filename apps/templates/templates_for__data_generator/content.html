@@ -5,11 +5,12 @@
     <h2>User data</h2><hr>
     <ol>
       {% for user in user_info %}
-        <li>
+        <li class="new-class-test">
           <b>Username:</b> {{ user.username }},
           <b>email:</b> {{ user.email }},
           <b>password:</b> {{ user.password }}
       {% endfor %}
+        </li>
     </ol>
   </div>
 {% endblock %}
