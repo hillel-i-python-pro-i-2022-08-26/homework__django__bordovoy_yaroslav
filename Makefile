@@ -88,3 +88,8 @@ d-purge:
 init-config:
 	@cp docker-compose.override.dev.yml docker-compose.override.yml && \
 		cp .env.example .env
+
+
+.PHONY: util-i-kill-by-port
+util-i-kill-by-port:
+	@sudo lsof -i:8000 -Fp | head -n 1 | sed 's/^p//' | xargs sudo kill
