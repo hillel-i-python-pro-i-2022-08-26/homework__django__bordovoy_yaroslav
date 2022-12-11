@@ -58,6 +58,7 @@ LOCAL_APPS = [
     "apps.contacts_db.apps.ContactsDbConfig",
     "apps.admin_user",
     "apps.sessions_app.apps.SessionsAppConfig",
+    "apps.accounts.apps.AccountsConfig",
 ]
 
 THIRD_PARTY_APPS = [
@@ -172,3 +173,6 @@ DATE_INPUT_FORMATS = [
     "%Y-%m-%d",
     "%Y-%d-%m",
 ]
+
+LOGIN_REDIRECT_URL = "homepage:index"
+LOGOUT_REDIRECT_URL = "homepage:index"

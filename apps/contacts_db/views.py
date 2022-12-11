@@ -1,6 +1,8 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 
 from .models import Contacts
@@ -77,6 +79,7 @@ def read_contact(request: HttpRequest) -> HttpResponse:
     )
 
 
+@method_decorator(login_required, name="post")
 class ContactsUpdateView(UpdateView):
     model = Contacts
     fields = (
@@ -91,7 +94,7 @@ class ContactsUpdateView(UpdateView):
         return reverse_lazy("contacts_db:contact", kwargs={"pk": self.object.pk})
 
 
+@method_decorator(login_required, name="post")
 class ContactsDeleteView(DeleteView):
     model = Contacts
     success_url = reverse_lazy("contacts_db:index")
-
