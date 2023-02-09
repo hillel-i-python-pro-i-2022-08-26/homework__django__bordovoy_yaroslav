@@ -59,6 +59,7 @@ LOCAL_APPS = [
     "apps.admin_user",
     "apps.sessions_app.apps.SessionsAppConfig",
     "apps.accounts.apps.AccountsConfig",
+    "apps.middlewares.apps.MiddlewaresConfig",
 ]
 
 THIRD_PARTY_APPS = [
@@ -80,6 +81,15 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+INIT_CUSTOM_MIDDLEWARE = True
+
+if INIT_CUSTOM_MIDDLEWARE:
+    MIDDLEWARE.extend(
+        [
+            env.str("MY_MIDDLEWARE"),
+        ],
+    )
 
 ROOT_URLCONF = "core.urls"
 
@@ -104,6 +114,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "core.wsgi.application"
+
+
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

@@ -27,6 +27,7 @@ urlpatterns = [
     path("user-info/", include("apps.data_generator.urls")),
     path("contacts/", include("apps.contacts_db.urls")),
     path("sessions/", include("apps.sessions_app.urls")),
+    path("middleware/", include("apps.middlewares.urls")),
 ]
 
 if settings.DEBUG:
