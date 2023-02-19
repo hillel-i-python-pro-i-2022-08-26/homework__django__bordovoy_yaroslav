@@ -17,6 +17,9 @@
         <li class="nav-item">
             <a class="nav-link" href="{% url 'sessions_app:index' %}">Session</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'middleware:index' %}">Middleware</a>
+        </li>
         {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'account:update' user.pk %}">Update profile</a>
