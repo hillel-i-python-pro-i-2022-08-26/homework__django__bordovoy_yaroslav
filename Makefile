@@ -92,4 +92,4 @@ init-config:
 
 .PHONY: util-i-kill-by-port
 util-i-kill-by-port:
-	@sudo lsof -i:8000 -Fp | head -n 1 | sed 's/^p//' | xargs sudo kill
+	@sudo lsof -i:15432 -Fp | head -n 1 | sed 's/^p//' | xargs sudo kill

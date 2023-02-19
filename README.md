@@ -63,3 +63,14 @@ make init-dev-i-create-superuser
 ```
 make d-homework-i-run
 ```
+
+## 🦸🏼‍♂️ Drf CRUD
+
+
+```
+/api/contacts/  --- view all contacts (API)
+/api/create/   --- create a contact (API)
+/api/update/contact_pk   --- update contact (API)
+/api/delete/contact_pk   --- delete contact (API)
+/api/showcontact_pk   --- view contact (API)
+```

@@ -8,3 +8,5 @@
 !manage.py
 !requirements.txt
 !Makefile
+!drf_crud
+
