@@ -60,11 +60,13 @@ LOCAL_APPS = [
     "apps.sessions_app.apps.SessionsAppConfig",
     "apps.accounts.apps.AccountsConfig",
     "apps.middlewares.apps.MiddlewaresConfig",
+    "apps.drf_crud.apps.DrfCrudConfig",
 ]
 
 THIRD_PARTY_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
+    "rest_framework",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -188,3 +190,9 @@ DATE_INPUT_FORMATS = [
 
 LOGIN_REDIRECT_URL = "homepage:index"
 LOGOUT_REDIRECT_URL = "homepage:index"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
